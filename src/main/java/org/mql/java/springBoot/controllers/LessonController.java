@@ -36,7 +36,7 @@ public class LessonController {
 	//@RequestMapping(value = "/topics" , method = RequestMethod.POST )
 	@PostMapping("/topics/{topicId}/courses/{courseId}/lessons")
 	public void addCourse(@RequestBody Lesson lesson,@PathVariable String courseId) {
-		lesson.setCourse(new Course(courseId, "", "", ""));
+		lesson.setCourse(new Course(courseId, "", "", 0, true, "", 0, ""));
 		lessonService.addLesson(lesson);
 	}
 	
@@ -44,7 +44,7 @@ public class LessonController {
 	//@RequestMapping(value = "/topics/{id}" , method = RequestMethod.PUT )
 	@PutMapping("/topics/{topicId}/courses/{courseId}/lessons/{id}")
 	public void updateCourse(@RequestBody Lesson lesson, @PathVariable String id,  @PathVariable String courseId ) {
-		lesson.setCourse(new Course(courseId, "", "", ""));
+		lesson.setCourse(new Course(courseId, "", "", 0, true, "", 0, ""));
 		lessonService.updateLesson(lesson);
 	}
 	

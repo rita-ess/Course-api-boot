@@ -47,7 +47,7 @@ public class Lesson {
 		this.id = id;
 		this.name = name;
 		this.description = description;
-		this.course = new Course(courseId, "", "", "");
+		this.course = new Course(courseId, "", "", 0, true, "", 0, "");
 	}
 
 	
